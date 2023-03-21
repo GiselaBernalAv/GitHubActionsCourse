@@ -1,0 +1,15 @@
+name: First Workflow
+# on is when will be executed, and after on you will deefine the event or events
+#workflow_dispatch makes sure that we can manually trigger this workflow, so its an event that 
+# wait for the user to manually trigger this workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: print goodbye
+        run: echo "Done - bye!"
+        
+      
